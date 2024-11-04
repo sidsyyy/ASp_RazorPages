@@ -1,0 +1,51 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "My First Softo";
+}
+
+
+@{
+    int k = 1;
+    while (k < 11)
+    {
+        <div>Good Evening @k</div>
+        k++;
+    }
+}
+
+<div class="text-center">
+    @{
+        if (@TempData["message"] != null)
+        {
+            
+        <div style="background-color: palevioletred; border-radius:40px;">
+             <h2>@TempData["message"]</h2>
+
+        </div>
+        }
+    }
+   @{
+     // <form id="lgform">
+     //     <div class="mb-3">
+     //         <label for="exampleFormControlInput1" class="form-label">Email address</label>
+     //         <input onfocusin="emailFoucusin()" onfocusout="emailFoucusout()" id="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"><br>
+     //         <p id="emailp"></p>
+     //         <label for="exampleFormControlInput1" class="form-label">Password</label>
+     //         <input onfocusin="pssFoucusin()" onfocusout="pssFoucusout()" id="password" type="password" class="form-control" id="exampleFormControlInput1" placeholder="password"><br>
+     //         <p id="psp"></p>
+     //         <button id="btn" type="submit" class="btn btn-primary form-control">Signup</button><br>
+     //     </div>
+     // </form>
+   }
+            
+    <form id="lgform" method="post">
+        <label class="form-label" asp-for="newUser.Email" ></label>
+        <input id="exampleFormControlInput1" asp-for="newUser.Email" class="form-control"></input>
+        <span asp-validation-for="newUser.Email"></span>
+        <label class="form-label" asp-for="newUser.Password"></label>
+        <input id="exampleFormControlInput1" asp-for="newUser.Password" class="form-control"></input>
+        <span asp-validation-for="newUser.Password"></span>
+        <button type="submit" class="btn btn-primary form-control">Login</button>
+    </form>
+</div>

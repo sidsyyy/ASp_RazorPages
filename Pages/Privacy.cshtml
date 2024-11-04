@@ -1,0 +1,133 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "REGISTRATION";
+}
+<h1>@ViewData["Title"]</h1>
+ @{
+  // <div class="container mt-5">
+  //     <h2>Registration Form</h2>
+  //     <form id="frmrg" method="post">
+
+  //         <div class="mb-3">
+  //             <label asp-for="newUser.Name" class="form-label">Full Name</label>
+  //             <input asp-for="newUser.Name"  class="form-control">
+  //             <span asp-validation-for="newUser.Name"></span>
+  //         </div>
+
+  //         <div class="mb-3">
+  //             <label asp-for="newUser.Email" class="form-label">Email address</label>
+  //             <input asp-for="newUser.Email" class="form-control">
+  //             <span asp-validation-for="newUser.Email"></span>
+  //         </div>
+
+
+  //         <div class="mb-3">
+  //             <label asp-for="newUser.Password" class="form-label">Password</label>
+  //             <input asp-for="newUser.Password" class="form-control">
+  //             <span asp-validation-for="newUser.Password"></span>
+  //         </div>
+  //         <div class="mb-3">
+  //             <label asp-for="newUser.ConfirmPassword" class="form-label">Confirm Password</label>
+  //             <input asp-for="newUser.ConfirmPassword" class="form-control">
+  //             <span asp-validation-for="newUser.ConfirmPassword"></span>
+  //         </div>
+        
+  //         <div class="mb-3">
+  //             <label asp-for="newUser.Number" class="form-label">Number</label>
+  //             <input asp-for="newUser.Number" class="form-control">
+  //             <span asp-validation-for="newUser.Number"></span>
+  //         </div>
+
+  //         <div class="mb-3">
+  //             <label asp-for="newUser.Age" class="form-label">Age</label>
+  //             <input asp-for="newUser.Age" class="form-control">
+  //             <span asp-validation-for="newUser.Age"></span>
+  //         </div>
+
+
+
+  //         <button type="submit" class="btn btn-primary">Register</button>
+  //     </form>
+  // </div>
+ }
+<section>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <h3 class="fw-normal mb-5" style="color: #4835d4;">General Infomation</h3>
+                                    <form id="frmrg" method="post">
+                                    <div class="mb-4 pb-2">
+                                        <label asp-for="newUser.Name" class="form-label">Full Name</label>
+                                         <input asp-for="newUser.Name" class="form-control">
+                                         <span asp-validation-for="newUser.Name"></span>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <label asp-for="newUser.Email" class="form-label">Email address</label>
+                                             <input asp-for="newUser.Email" class="form-control">
+                                             <span asp-validation-for="newUser.Email"></span>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <label asp-for="newUser.Password" class="form-label">Password</label>
+                                                <input asp-for="newUser.Password" class="form-control">
+                                                  <span asp-validation-for="newUser.Password"></span>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <label asp-for="newUser.ConfirmPassword" class="form-label">Confirm Password</label>
+                                            <input asp-for="newUser.ConfirmPassword" class="form-control">
+                                            <span asp-validation-for="newUser.ConfirmPassword"></span>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <label asp-for="newUser.Number" class="form-label">Number</label>
+                                            <input asp-for="newUser.Number" class="form-control">
+                                            <span asp-validation-for="newUser.Number"></span>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <label asp-for="newUser.Age" class="form-label">Age</label>
+                                            <input asp-for="newUser.Age" class="form-control">
+                                            <span asp-validation-for="newUser.Age"></span>
+
+                                        </div>
+                                            <div class="col-md-6 mb-4 pb-2">
+                                               
+                                                <select asp-for="CourseList" asp-items="Model.CourseOptions" class="form-control">
+                                                    <option value="">Select Course</option>
+                                                </select>
+                                                <span asp-validation-for="CourseList"></span>
+                                            </div>
+                                    </div>
+
+
+
+
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 bg-indigo text-white">
+                                <img class="img-fluid" src="https://rsvpify.com/wp-content/uploads/2021/06/Event-Registration-.png"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

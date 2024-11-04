@@ -1,0 +1,28 @@
+﻿@page
+@model WebApplication2.Pages.UploadImageModel
+
+<h2>Upload an Image</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label for="UploadedFile">Upload an image:</label>
+        <input type="file" id="UploadedFile" name="UploadedFile" />
+    </div>
+    <button type="submit">Upload</button>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div>
+            <span style="color:red;">@ViewData.ModelState["UploadedFile"]?.Errors[0]?.ErrorMessage</span>
+        </div>
+    }
+</form>
+
+<h3>Random Image</h3>
+<img src="@Model.RandomImageUrl" alt="Random Image" style="max-width: 100%; height: auto;" />
+
+@if (!string.IsNullOrEmpty(Model.UploadedImageUrl))
+{
+    <h3>Uploaded Image</h3>
+    <img src="@Model.UploadedImageUrl" alt="Uploaded Image" style="max-width: 100%; height: auto;" />
+}

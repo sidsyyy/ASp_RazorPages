@@ -1,0 +1,17 @@
+﻿@page
+@model WebApplication2.Pages.CommonResponsePageModel
+@{
+    ViewData["Title"] = "My First Softo";
+}
+
+<h1>This is common response page</h1>
+@{
+    if (@TempData["message"] != null)
+    {
+        
+    <h1>@TempData["message"]</h1>
+
+
+    <button class="btn btn-primary"><a class="nav-link text-dark" asp-area="" asp-page=@TempData["link"]>Redirect To @TempData["link"]</a> </button>
+    }
+} 
